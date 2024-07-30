@@ -57,3 +57,15 @@
     color: #fff;
     background: #6d6d6eb3;
 }
+
+.heroBtns .btn:hover{
+    background: #ffffffbf;
+}
+
+.heroBtns .btn.dark-btn:hover{
+    background: #6d6d6e66;
+}
+
+.moreCards{
+    padding-left: 6%;
+}
