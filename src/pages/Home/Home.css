@@ -69,3 +69,46 @@
 .moreCards{
     padding-left: 6%;
 }
+
+@media (max-width: 1024px){
+    .hero-caption .Titlecards{
+        display: none;
+    }
+    .heroBtns{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 800px){
+    .hero-caption{
+        padding-left: 4%;
+    }
+    .captionImg{
+        margin-bottom: 10px;
+        width: 40%;
+    }
+    .hero-caption p{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .heroBtns .btn img{
+        width: 20px;
+    }
+    .moreCards{
+        padding-left: 4%;
+    }
+}
+
+@media (max-width: 500px){
+    .captionImg{
+        display: none;
+    }
+    .heroBtns .btn img{
+        width: 15px;
+    }
+    .heroBtns .btn{
+        padding: 4px 10px;
+        gap: 5px;
+        font-size: 10px;
+    }
+}
