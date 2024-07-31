@@ -5,6 +5,7 @@ import search from '../../assets/search_icon.svg'
 import bell from '../../assets/bell_icon.svg'
 import profile_img from '../../assets/profile_img.png'
 import drpdown from '../../assets/drpdown.svg'
+import { logout } from '../../firebase'
 
 const Nav = () => {
 
@@ -41,7 +42,7 @@ const Nav = () => {
           <img src={profile_img} alt='' className='profile'></img>
           <img src={drpdown} alt=''></img>
           <div className='dropdown'>
-            <p>Sign Out</p>
+            <p onClick={()=>{logout()}}>Sign Out</p>
           </div>
         </div>
       </div>
