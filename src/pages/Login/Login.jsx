@@ -1,10 +1,22 @@
 import React, { useState } from 'react'
 import './Login.css'
 import logo from '../../assets/NotflixLogo.png'
+import { userLogin, userSignup } from '../../firebase'
 
 const Login = () => {
   const [signState, setSignState] = useState("Log In")
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  const userAuth = async (event)=>{
+    event.preventDefault();
+    if(signState === "Log In"){
+      await userLogin(email, password);
+    }else{
+      await userSignup(name, email, password);
+    }
+  }
 
   return (
     <div className='login'>
@@ -12,10 +24,10 @@ const Login = () => {
       <div className='loginForm'>
         <h1>{signState}</h1>
         <form>
-          {signState==='Sign Up'?<input type='text' placeholder='Name'></input>:<></>}
-          <input type='email' placeholder='Email'></input>
-          <input type='password' placeholder='Password'></input>
-          <button>{signState}</button>
+          {signState==='Sign Up'?<input value={name} onChange={(e)=>{setName(e.target.value)}} type='text' placeholder='Name'></input>:<></>}
+          <input value={email} onChange={(e)=>{setEmail(e.target.value)}} type='email' placeholder='Email'></input>
+          <input value={password} onChange={(e)=>{setPassword(e.target.value)}} type='password' placeholder='Password'></input>
+          <button onClick={userAuth} type='submit'>{signState}</button>
           <div className="formHelp">
             <div className="remember">
               <input type='checkbox'/>
