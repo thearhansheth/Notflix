@@ -35,3 +35,35 @@
     text-decoration: none;
     color: white;
 }
+
+@media (max-width: 800px){
+    .titleCards{
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    .titleCards h2{
+        font-size: 20px;
+    }
+    .cardList img{
+        width: 180px;
+    }
+    .cardList p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px){
+    .titleCards{
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    .titleCards h2{
+        font-size: 18px;
+    }
+    .cardList img{
+        width: 120px;
+    }
+    .cardList p{
+        font-size: 10px;
+    }
+}
